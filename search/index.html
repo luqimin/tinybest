@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高级搜索 - Powered by EmpireCMS</title>
+<link href="/skin/default/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/skin/default/js/tabs.js"></script>
+<script src="/e/data/images/setday.js"></script>
+</head>
+<body class="listpage">
+<!-- 页头 -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="top">
+<tr>
+<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="63%">
+<!-- 登录 -->
+<script>
+document.write('<script src="/e/member/login/loginjs.php?t='+Math.random()+'"><'+'/script>');
+</script>
+</td>
+<td align="right">
+<a onclick="window.external.addFavorite(location.href,document.title)" href="#ecms">加入收藏</a> | <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('/')" href="#ecms">设为首页</a> | <a href="/e/member/cp/">会员中心</a> | <a href="/e/DoInfo/">我要投稿</a> | <a href="/e/web/?type=rss2" target="_blank">RSS<img src="/skin/default/images/rss.gif" border="0" hspace="2" /></a>
+</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="10">
+<tr valign="middle">
+<td width="240" align="center"><a href="/"><img src="/skin/default/images/logo.gif" width="200" height="65" border="0" /></a></td>
+<td align="center"><a href="http://www.phome.net/OpenSource/" target="_blank"><img src="/skin/default/images/opensource.gif" width="100%" height="70" border="0" /></a></td>
+</tr>
+</table>
+<!-- 导航tab选项卡 -->
+<table width="920" border="0" align="center" cellpadding="0" cellspacing="0" class="nav">
+  <tr> 
+    <td class="nav_global"><ul>
+        <li class="curr" id="tabnav_btn_0" onmouseover="tabit(this)"><a href="/">首页</a></li>
+        <li id="tabnav_btn_1" onmouseover="tabit(this)"><a href="/news/">新闻中心</a></li>
+        <li id="tabnav_btn_2" onmouseover="tabit(this)"><a href="/download/">下载中心</a></li>
+        <li id="tabnav_btn_3" onmouseover="tabit(this)"><a href="/movie/">影视频道</a></li>
+        <li id="tabnav_btn_4" onmouseover="tabit(this)"><a href="/shop/">网上商城</a></li>
+        <li id="tabnav_btn_5" onmouseover="tabit(this)"><a href="/flash/">FLASH频道</a></li>
+        <li id="tabnav_btn_6" onmouseover="tabit(this)"><a href="/photo/">图片频道</a></li>
+        <li id="tabnav_btn_7" onmouseover="tabit(this)"><a href="/article/">文章中心</a></li>
+        <li id="tabnav_btn_8" onmouseover="tabit(this)"><a href="/info/">分类信息</a></li>
+      </ul></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="10" cellpadding="0">
+	<tr valign="top">
+		<td class="list_content"><table width="100%" border="0" cellspacing="0" cellpadding="0" class="position">
+				<tr>
+					<td>现在的位置：<a href='/'>首页</a>&nbsp;>&nbsp;<a href='../search/'>高级搜索</a>&nbsp;></td>
+				</tr>
+			</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="box">
+				<tr>
+					<td><table width="100%" border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><form action='/e/search/index.php' method="post" name="search_news" id="search_news">
+									<table width="100%" border="0" cellspacing="0" cellpadding="0">
+										<tr>
+											<td width="54%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索范围</strong></td>
+													</tr>
+											</table></td>
+											<td width="46%"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td bgcolor="#F4F4F4"><strong>搜索栏目</strong></td>
+													</tr>
+											</table></td>
+										</tr>
+										<tr>
+											<td valign="top"><table width="100%" border="0" cellpadding="6" cellspacing="0">
+													<tr>
+														<td><input type="radio" name="show" value="title" checked="checked" />
+															标题
+															<input type="radio" name="show" value="smalltext" />
+															简介
+															<input type="radio" name="show" value="newstext" />
+															内容
+															<input type="radio" name="show" value="writer" />
+															作者
+															<input name="show" type="radio" value="title,smalltext,newstext,writer" />
+															不限</td>
+													</tr>
+												</table>
+													<br />
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr bgcolor="#F4F4F4">
+															<td><strong>时间限制</strong><font color="#666666">(0000-00-00为不限制)</font></td>
+														</tr>
+														<tr>
+															<td height="30" valign="top">从
+																<input name="starttime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																到
+																<input name="endtime" type="text" value="0000-00-00" size="12" onclick="setday(this)" />
+																之间的数据</td>
+														</tr>
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>价格限制</strong><font color="#666666">(商城模型中有效,0为不限制)</font></td>
+														</tr>
+														<tr>
+															<td>从
+																<input name="startprice" type="text" id="startprice" value="0" size="6" />
+																到
+																<input name="endprice" type="text" id="endprice" value="0" size="6" />
+																元之间</td>
+														</tr>
+												</table></td>
+											<td valign="top"><table width="100%" border="0" cellspacing="6" cellpadding="0">
+													<tr>
+														<td><select name="classid" size="8" id="select2" style="width: 100%;height:112px">
+																<option value="0" selected="selected">所有栏目</option>
+															<option value='1' style='background:#99C4E3'>|-平台依托单位</option><option value='2' style='background:#99C4E3'>|-专家团队</option><option value='3' style='background:#99C4E3'>|-技术</option><option value='4' style='background:#99C4E3'>|-关于我们</option><option value='6'>|-新闻中心</option><option value='5' style='background:#99C4E3'>&nbsp;&nbsp;|-公司新闻</option><option value='7' style='background:#99C4E3'>&nbsp;&nbsp;|-行业新闻</option><option value='8' style='background:#99C4E3'>&nbsp;&nbsp;|-专业常识</option>
+          
+														</select></td>
+													</tr>
+												</table>
+													<table width="100%" border="0" cellpadding="6" cellspacing="0">
+														<tr>
+															<td bgcolor="#F4F4F4"><strong>结果显示</strong></td>
+														</tr>
+														<tr>
+															<td height="30"><select name="orderby" id="select4">
+																	<option value="">按发布日期</option>
+																	<option value="id">信息ID</option>
+																	<option value="plnum">评论数</option>
+																	<option value="onclick">人气</option>
+																	<option value="totaldown">下载数</option>
+																</select>
+																	<select name="myorder" id="select5">
+																		<option value="0">倒序排列</option>
+																		<option value="1">顺序排列</option>
+																	</select>
+															</td>
+														</tr>
+												</table></td>
+										</tr>
+									</table>
+								<table width="100%" border="0" cellpadding="4" cellspacing="0">
+										<tr>
+											<td>关键字：
+												<input name="keyboard" type="text" id="keyboard2" size="60" />
+													<input type="submit" name="Submit22" value="搜索" />
+											</td>
+										</tr>
+									</table>
+							</form></td>
+						</tr>
+					</table></td>
+				</tr>
+			</table></td>
+	</tr>
+</table>
+<footer style="background-image: url(/skin/default/images/2014092185736673.jpg);" class="pingpu-bg" id="yy">
+    <div id="demo" class="footer container sx-padding">
+        <div class="clearfix wow animated fadeIn">
+            <section>
+                <h3>在线预约 Online booking</h3>
+                <form action="/plus/diy.php" enctype="multipart/form-data" method="post" name="lansige" onSubmit="return CheckForm()" >
+                    <input type="hidden" name="action" value="post" />
+                    <input type="hidden" name="diyid" value="1" />
+                    <input type="hidden" name="do" value="2" />
+                    <ul class="list-unstyled">
+                        <li>
+                            <input name="xm" type="text" id="xm" value="" placeholder="您的尊称 Name" maxlength="10">
+                        </li>
+                        <li>
+                            <input name="dh" type="text" id="dh" value="" placeholder="您的电话 Phone" maxlength="11">
+                        </li>
+                        <li>
+                            <textarea name="nr" cols="" id="nr" value="" placeholder="您要留言的内容 Content" maxlength="200"></textarea>
+                        </li>
+                        <input type="hidden" name="dede_fields" value="xm,text;dh,text;nr,multitext" />
+                        <input type="hidden" name="dede_fieldshash" value="af9692c6aaa5752e3fce5a141f10a7c8" />
+                        <li>
+                            <input name="button" type="submit" id="button" value="立即提交 Submit →">
+                        </li>
+                    </ul>
+                </form>
+                <div id="savediv" style="visibility:hidden;">处理中,请勿进行其他操作...</div>
+                <script language="javascript" type="text/javascript">
+                    function gosavenow(){
+                        savediv.style.visibility="visible";}
+                </script>
+                <script language="javascript" type="text/javascript">
+                    function CheckForm() {
+                        if(lansige.xm.value == '') {
+                            alert('对不起！请输入您的称呼！');
+                            lansige.xm.focus();
+                            return false;}
+                        if(lansige.dh.value == '') {
+                            alert('对不起！请输入您的电话！');
+                            lansige.dh.focus();
+                            return false;}
+                        var re = new RegExp("^([0-9])+$","ig");
+                        {if (!re.test(lansige.dh.value))
+                        {alert("对不起！电话只能是0-9的数字！");
+                            lansige.dh.focus();
+                            return false;}}
+                        if(lansige.nr.value == '') {
+                            alert('对不起！请输入您的留言内容(不超过200个字)！');
+                            lansige.nr.focus();
+                            return false;}
+                        gosavenow();}
+                </script>
+            </section>
+            <section class="bianju">
+                <h3>联系我们 Contact US</h3>
+                <address>
+                    <ul class="list-unstyled">
+                        <li>地址：北京化工大学</li>
+                        <li>服务电话：010-11112222/ 400-8888-888</li>
+                        <li>服务手机：188-8888-8888/ 24 Hours 服务</li>
+                        <li>Q　　Q：88888888</li>
+                        <li>E-mail：12345@qq.com</li>
+                    </ul>
+                </address>
+                <h4>快捷入口 Quick Entry</h4>
+                <p>  <a href="/about/" target="_blank">关于我们</a> /
+                    <a href="/news/" target="_blank">新闻资讯</a> /
+                    <a href="/case/" target="_blank">成功案例</a> /
+                    <a href="/team/" target="_blank">企业团队</a> /
+                    <a href="/service/" target="_blank">专业服务</a> /
+                    <a href="/contact/" target="_blank">联系我们</a> /
+                </p>
+            </section>
+            <section>
+                <h3>内容搜索 Search</h3>
+                <form name="formsearch" action="/plus/search.php">
+                    <ul class="list-unstyled">
+                        <li><input name="q" type="text" class="key" value="输入关键词 Keyword" placeholder="输入关键词 Keyword" onFocus="if (value =='输入关键词 Keyword'){value =''}" onBlur="if (value ==''){value='输入关键词 Keyword'}" /><input type="submit" class="s-button" value="搜索" /></li>
+                    </ul>
+                </form>
+                <form method="post" target="_blank" action="http://list.qq.com/cgi-bin/qf_compose_send">
+                    <ul class="list-unstyled">
+                        <li class="mail-tx">输入邮箱定期接收我们的最新信息</li>
+                        <li><input type="hidden" value="qf_booked_feedback" name="t" />
+                            <input type="hidden" value="79d7181ac4d8b0144664925406fa6b1ebc29568929546ae8" name="id" />
+                            <input type="text" class="mail" name="to" id="to" value="Email Address" placeholder="Email Address" onFocus="if (value =='Email Address'){value =''}" onBlur="if (value ==''){value='Email Address'}" /><input type="submit" class="m-button" value="提交"></li>
+                    </ul>
+                </form>
+            </section>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container clearfix">
+            <p class="copy pull-left">Copyright &copy; 2016-2016 京ICP备11100019号-1 <a href="http://www.luqimin.com/" target="_blank">技术支持</a></p>
+            <p class="renzheng pull-right text-right"> <img src="/skin/default/images/2014090504144234.png" width="32" height="32" alt="工商合法注册企业" title="工商合法注册企业" /> <img src="/skin/default/images/2014090504203747.png" width="32" height="32" alt="安全网站" title="安全网站" /> <img src="/skin/default/images/2014090504244226.png" width="32" height="32" alt="网上报警" title="网上报警" /> <img src="/skin/default/images/2014090504278696.png" width="32" height="32" alt="中国建筑装饰协会会员" title="中国建筑装饰协会会员" /> <img src="/skin/default/images/2014090504317881.png" width="32" height="32" alt="中国建筑学会会员" title="中国建筑学会会员" /> </p>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+<!-- jQuery start -->
+<script src="/skin/default/js/jquery.min.js"></script>
+<script src="/skin/default/js/wow.min.js"></script>
+<script>
+wow = new WOW(
+{animateClass: 'animated',
+offset:100});
+wow.init();
+</script>
+<!-- header up start -->
+<script src="/skin/default/js/headroom.min.js"></script>
+<script src="/skin/default/js/jquery.headroom.js"></script>
+<script>$("#header").headroom();</script>
+<!-- banner start -->
+
+<script type="text/javascript" src="/skin/default/js/nav.hover.js"></script>
+</body>
+</html>
