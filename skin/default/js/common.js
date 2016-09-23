@@ -1,5 +1,6 @@
 /**
  * Created by lqm on 2016/9/6.
+ * @desc 公共底部预约
  */
 $(function () {
     //底部反馈
