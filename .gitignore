@@ -1,2 +1,11 @@
 .idea
 jsconfig.json
+*.html
+about
+errpage
+html
+images
+news
+platform
+team
+technology
